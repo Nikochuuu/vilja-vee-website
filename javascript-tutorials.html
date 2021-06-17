@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>WEB TOOLS</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style media="screen">
+  #superbox {
+    width: 1000px;
+    height: 800px;
+    border: 2px solid black;
+  }
+</style>
+
+<script type="text/javascript">
+function convert() {
+document.getElementById('seconds').innerHTML =
+"Result: " +
+document.getElementById('minutes').value * 60;
+}
+function triArea() {
+document.getElementById('triangleresult').innerHTML =
+"Result: " +
+document.getElementById('trianglebase').value *
+document.getElementById('triangleheight').value / 2;
+}
+function sumPolygon() {
+  (n - 2) x 180
+}
+</script>
+
+<body>
+<div class="container py-3 bg-info text-white" id="superbox">
+  <div class="row">
+    <div class="container col-sm py-3 border-black" id="minstosecs">
+      <p>Convert minutes to seconds</p>
+      <p id="seconds">Result: </p>
+      <input type="text" id="minutes" value="">
+      <button type="button" onclick="convert()">Convert to seconds</button>
+    </div>
+
+    <div class="container col-sm py-3 border-black" id="trianglearea">
+      <p>Triangle Area calculator</p>
+      <p id="triangleresult">Result: </p>
+      <label for="trianglebase">Base</label>
+      <input type="text" id="trianglebase" value="">
+      <label for="triangleheight">Height</label>
+      <input type="text" id="triangleheight" value="">
+      <button type="button" onclick="triArea()">Calculate</button>
+    </div>
+
+    <div class="container col-sm py-3 border-black" id="polygonsum">
+      <p>Sum of angles in n-sided polygon</p>
+      <p id="polygonresult">Result: </p>
+      <label for="polygonangles">number of angles</label>
+      <input type="text" id="trianglebase" value="">
+      <button type="button" onclick="sumPolygon()">Calculate</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
